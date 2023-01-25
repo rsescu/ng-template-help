@@ -1,0 +1,111 @@
+/* Add application styles & imports to this file! */
+
+@import "./images.scss";
+
+
+
+.pasture {
+  display: inline-block;
+  background-image: $grass-background;
+  background-clip: padding-box;
+  border: 32px solid transparent;
+  border-image-source: $grass-border;
+  border-image-slice: 32 32 32 32; 
+  border-image-repeat: repeat repeat; 
+}
+
+.fence, .barn, .outside {
+  display: inline-block;
+  vertical-align: top;
+  padding: 85px 20px 0 76px;
+}
+
+.fence, .barn, .outside {
+  my-sheep {
+    display: block;
+    margin-left: -56px;
+
+    &:first-child {
+      margin-top: -85px;
+    }
+  }
+}
+
+.fence, .barn {
+  font: inherit;
+  background: none;
+  border: 32px solid transparent;
+  border-image-source: $fence;
+  border-image-slice: 32 32 32 32; 
+  border-image-repeat: repeat repeat; 
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+}
+
+.farm .fence, .barn {
+  margin: 20px 10px;
+  border-width: 20px;
+  border-image-width: 32px;
+  border-image-outset: 16px;
+  background: $straw;
+  background-clip: border-box;
+}
+
+.pasture > my-sheep {
+  display: inline-block;
+}
+
+
+.no-portals, .portals {
+  position: relative;
+  margin-top: 60px;
+
+  &::before {
+    content: "☀️";
+    font-size: 50px;
+    position: absolute;
+    top: -83px;
+    left: -20px;
+    right: -20px;
+    padding: 0 0 30px 20px;
+    background: #87cefa;
+    z-index: -1;
+    border-radius: 10px;
+  }
+  &.night::before {
+    content: "🌙";
+    background: #191970;
+  }
+  
+  .barn {
+    height: 127px;
+  }
+
+  .outside {
+    padding-top: 124px;
+  }
+}
+
+.portals {
+  .barn::before, .outside::before {
+    content: " ";
+    position: absolute;
+    top: -50px;
+    display: block;
+    width: 80px;
+    height: 100px;
+    background-size: contain;
+  }
+
+  .barn::before {
+    background-image: $portal-blue;
+    left: 40px;
+  }
+
+  .outside::before {
+    background-image: $portal-orange;
+    left: 170px;
+  }
+}
