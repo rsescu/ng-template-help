@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'my-elephant',
-  template: `🐘`,
-  styles: [`:host {font-size: 6em}`]
+    selector: 'my-elephant',
+    template: `🐘`,
+    styles: [`:host {font-size: 6em}`]
 })
-export class ElephantComponent  {}
+export class ElephantComponent {
+}

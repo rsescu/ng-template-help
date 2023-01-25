@@ -10,11 +10,15 @@ import { TemplateRefTemplateOutletComponent } from './template-ref-template-outl
 import { FarmTemplateOutletNestedComponent } from './farm-template-nested-outlet.component';
 import { TemplateRefBrokenComponent } from './template-ref-broken.component';
 import { BrokenNestedComponent } from './broken-nested.component';
+import { FarmTemplateNestedBrokenOutletComponent } from './farm-template-nested-broken-outlet';
+import { FarmTemplateNestedWorkingOutletComponent } from './farm-template-nested-working-outlet';
+import { WorkingNestedComponent } from './working-nested.component';
+import { TemplateRefWorkingComponent } from './template-ref-working.component';
 
 @NgModule({
     imports: [CommonModule, CommonExamplesModule],
-    declarations: [NestedComponent, BrokenNestedComponent, TemplateRefBrokenComponent, SheepBlueprintDirective, FarmTemplateOutletComponent, TemplateRefTemplateNestedOutletComponent, TemplateRefTemplateOutletComponent, FarmTemplateOutletNestedComponent],
-    exports: [TemplateRefTemplateNestedOutletComponent, TemplateRefTemplateOutletComponent, TemplateRefBrokenComponent]
+    declarations: [NestedComponent, BrokenNestedComponent, TemplateRefBrokenComponent, SheepBlueprintDirective, FarmTemplateOutletComponent, TemplateRefTemplateNestedOutletComponent, TemplateRefTemplateOutletComponent, FarmTemplateOutletNestedComponent, FarmTemplateNestedBrokenOutletComponent, FarmTemplateNestedWorkingOutletComponent, WorkingNestedComponent, TemplateRefWorkingComponent],
+    exports: [TemplateRefTemplateNestedOutletComponent, TemplateRefTemplateOutletComponent, TemplateRefBrokenComponent, TemplateRefWorkingComponent]
 })
 export class TemplateRefModule {
 }

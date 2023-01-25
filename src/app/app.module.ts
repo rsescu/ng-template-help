@@ -8,6 +8,7 @@ import { TemplateRefModule } from './template-ref/template-ref.module';
     imports: [BrowserModule, TemplateRefModule],
     declarations: [AppComponent],
     bootstrap: [AppComponent]
+
 })
 export class AppModule {
 }

@@ -6,7 +6,7 @@ import { FarmComponent } from './farm';
     selector: '[mySheepBlueprint]'
 })
 export class SheepBlueprintDirective {
-    constructor(templateRef: TemplateRef<void>, farm: FarmComponent) {
+    constructor(templateRef: TemplateRef<any>, farm: FarmComponent) {
         farm.sheepTemplate = templateRef;
     }
 }

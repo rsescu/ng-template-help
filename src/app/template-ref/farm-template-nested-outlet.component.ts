@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 
-import { FarmComponent } from './farm';
-
 @Component({
     selector: 'my-farm-template-nested-outlet',
     template: `
@@ -18,7 +16,6 @@ import { FarmComponent } from './farm';
     host: {
         "[class.farm]": "true"
     },
-    providers: [{provide: FarmComponent, useExisting: FarmTemplateOutletNestedComponent}]
 })
-export class FarmTemplateOutletNestedComponent extends FarmComponent {
+export class FarmTemplateOutletNestedComponent {
 }

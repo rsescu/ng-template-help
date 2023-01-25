@@ -1,11 +1,14 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'my-template-ref-broken',
-  template: `
+    selector: 'my-template-ref-broken',
+    template: `
         <my-broken-nested>
-            <button *mySheepBlueprint>Some other Button</button>
+            <ng-template>
+                <button>Some other Button</button>
+            </ng-template>
         </my-broken-nested>
     `,
 })
-export class TemplateRefBrokenComponent {}
+export class TemplateRefBrokenComponent {
+}
